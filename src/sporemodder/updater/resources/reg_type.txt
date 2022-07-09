@@ -1,0 +1,71 @@
+smt	0x0469A3F7
+
+crystalTuning	0x20426A63
+eliteNPCGlobals	0xE5C2D838
+npcAffix	0x7CA6C6C9
+magicNumbers	0x36201B51
+serverEventDef	0x92EA4AAC
+difficultyTuning	0x8E94F44C
+chainLevels	0xA8A25294
+sectionConfig	0xA38FA119
+directorTuning	0x9342C4D3
+characterType	0xAAED883B
+lootPreferences	0x61BF29AA
+weaponTuning	0x58E9A177
+unlocksTuning	0x534136B6
+spaceshipTuning	0x60C1B295
+characterAnimation	0x17BBCE29
+prop_new	0xE51118C3
+markerSet	0xA11D3144
+condition	0x9F8087D5
+phase	0x30728CE7
+aiDefinition	0xEEEB0E31
+lua	0x3681D755
+blockdata	0x5caa5e28
+ClassAttributes	0x474940A5
+NonPlayerClass	0xD117AFCA
+
+mounted
+direct
+detail
+round
+square
+origin
+
+cTimeOfDay	0x21F10B2
+cNpcTribeController	0x21F1105
+cTribePlanner	0x3098AF98
+cCitySimulator	0x21F1187
+cCombatSimulator	0x23BA44D
+cPosseSimulator	0x21F11AE
+cSimulatorSpaceGame	0x21F15DD
+cSimPlanetHighLOD	0x21F11C4
+cVehicleTicker	0x2E1923C
+cBadgeManager	0x2CB0EE3
+cMissionManager	0x2AA56D0
+cCreatureMissionManager	0xD406729F
+cTribeMissionManager	0x74336F3E
+cCivMissionManager	0x58B3257
+cSimulatorUniverse	0x2A8BFBE
+cSimulatorPlayerUFO	0x2F011ED
+cDramaManager	0x3226D7D4
+cPlayerCityMusic	0x42232A1
+cNPCCityMusic	0x424EA07
+cEmpireGrowthSim	0x4238ECC
+cRelationshipManager	0x18EB5C7
+
+cCollectableItems	0x3A3AC9F
+cCommEvent	0x37ABB4A
+cEventLogCommItem	0x447341A
+cSolarSystem	0x38CF94C
+cSpaceToolData	0x32229FF
+cSpaceInventoryItem	0x223BE7B
+cAnimalCargoInfo	0x384F82A
+cPlantCargoInfo	0x384EF2A
+cStarRecord	0x3E4353C
+cPlanetRecord	0x3E434E2
+
+gfx	0x278CF8F2
+
+jpg	0x3f8662ea
+ico	0x14885d1c
