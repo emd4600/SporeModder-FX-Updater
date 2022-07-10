@@ -150,7 +150,11 @@ public class UpdateTask extends Task<Void> {
 			try (BufferedWriter output = new BufferedWriter(new FileWriter(regFile, true))) {
 				for (Map.Entry<Integer, String> hash : inputRegistry.names.entrySet()) 
 				{
-					if (registry.getName(hash.getKey()) == null) {
+					// Before we excluded names that already existed, but we want to be able to replace them
+					// Adding the new entries at the end ensures the new names will have priority, 
+					// while keeping compatibility with the old names 
+					//if (true /*registry.getName(hash.getKey()) == null*/) {
+					if (!hash.getValue().equals(registry.getName(hash.getKey()))) {
 						if (!addedBlankLine) {
 							output.newLine();
 							addedBlankLine = true;
