@@ -69,3 +69,7 @@ gfx	0x278CF8F2
 
 jpg	0x3f8662ea
 ico	0x14885d1c
+
+obstacle_info	0x2ae9952d
+bfx	0x1999ae0b
+bin	0x2699c284
