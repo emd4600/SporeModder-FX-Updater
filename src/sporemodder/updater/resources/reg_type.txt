@@ -73,3 +73,7 @@ ico	0x14885d1c
 obstacle_info	0x2ae9952d
 bfx	0x1999ae0b
 bin	0x2699c284
+
+pdn	0x477764f5
+png.dds 0xb8444447
+tmp	0x3e6cc964
