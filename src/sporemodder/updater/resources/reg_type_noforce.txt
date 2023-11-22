@@ -260,3 +260,15 @@ ValidAdventurerCreatures	0x5144c45f
 reversed	0x17f3adef
 
 LRUMetaData	0x2e5a9763
+
+arth	0x472329b
+look_algorithm	0xdba35ae2
+backgroundMap	0x612b3191
+effectMap	0x433fb70c
+pollen_metadata.bak	0xe1e7f839
+avi	0x41e19be
+uiTexture	0xef7d16e1
+activeLog	0x2c23df7
+cPlanetRecord	0x5220cb8
+
+mrk	0x2b7df427
