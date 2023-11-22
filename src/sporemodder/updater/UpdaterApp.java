@@ -2,6 +2,8 @@ package sporemodder.updater;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -35,7 +37,9 @@ public class UpdaterApp extends Application {
 	private void setupTask(UpdateTask task) {
 		task.addFile("SporeModderFX.jar");
 		task.addFile("SporeModderFX.exe");
+		task.addFile("smfx.exe");
 		task.addFile("ModCreatorKit.sporemod");
+		task.addFile("advect.py");
 		
 		task.addOptionalFile("EffectsEditor/main.pfx", buildPath("Effect Editor", "main.pfx"));
 		task.addOptionalFile("EffectsEditor/main.effdir", buildPath("Effect Editor", "main.effdir"));
@@ -101,8 +105,19 @@ public class UpdaterApp extends Application {
 		return sb.toString();
 	}
 	
-	private void showErrorAlert() {
-		Alert alert = new Alert(AlertType.ERROR, "Updater failed, original program may still be running.", ButtonType.OK);
+	private void showErrorAlert(Throwable e) {
+		String message = "Updater failed, original program may still be running.";
+		if (e != null) {
+			try (StringWriter sw = new StringWriter();
+					PrintWriter pw = new PrintWriter(sw)) {
+				e.printStackTrace(pw);
+				message += "\n\n" + sw.toString();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+		Alert alert = new Alert(AlertType.ERROR, message, ButtonType.OK);
 		alert.showAndWait();
 	}
 	
@@ -180,7 +195,7 @@ public class UpdaterApp extends Application {
 			});
 			
 			task.setOnFailed(event -> {
-				showErrorAlert();
+				showErrorAlert(task.getException());
 				Platform.exit();
 			});
 			
@@ -189,7 +204,7 @@ public class UpdaterApp extends Application {
 			primaryStage.show();
 		}
 		else {
-			showErrorAlert();
+			showErrorAlert(null);
 		}
 	}
 }
