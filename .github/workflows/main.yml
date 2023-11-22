@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout SporeModderFX
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
         with:
           repository: emd4600/SporeModder-FX
           path: SporeModder-FX
