@@ -1,0 +1,15 @@
+on:
+  workflow_call:
+    inputs:
+      file-name:
+        required: true
+        type: string
+
+jobs:
+  update-names-reg:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+          cd SporeModder-FX
+          lastTagCommit=git rev-list -n 1 $(git describe --tags --abbrev=0)
+          git diff -U0 $lastTagCommit ${{ inputs.config-path }} | grep '^[+]' | grep -Ev '^(--- a/|\+\+\+ b/)' | cut -c2- >> ../Updater/src/sporemodder/updater/resources/${{ inputs.config-path }}
