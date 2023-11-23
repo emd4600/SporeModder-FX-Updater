@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v3.1.3
         with:
           name: SporeModder-FX-jar
-          path: target/SporeModderFX.jar
+          path: target/sporemodderfx-*.jar
 
   build_updater:
     name: Build updater
@@ -48,8 +48,10 @@ jobs:
         with:
           path: Updater
 
+      - run: pwd | ls
+
       - name: Update reg_file.txt
-        run: bash collect_reg_changes.sh reg_file.txt >> Updater/src/sporemodder/updater/resources/reg_file.txt
+        run: bash collect_reg_changes.sh reg_file.txt # >> Updater/src/sporemodder/updater/resources/reg_file.txt
 
       - name: Update reg_property.txt
         run: bash collect_reg_changes.sh reg_property.txt >> Updater/src/sporemodder/updater/resources/reg_property.txt
