@@ -85,12 +85,12 @@ jobs:
 
       - name: Update release files
         run: |
-          cp ../SporeModder-FX/reg_cnv.txt "SporeModder FX/reg_cnv.txt"
-          cp ../SporeModder-FX/reg_file.txt "SporeModder FX/reg_file.txt"
-          cp ../SporeModder-FX/reg_property.txt "SporeModder FX/reg_property.txt"
-          cp ../SporeModder-FX/reg_simulator.txt "SporeModder FX/reg_simulator.txt"
-          cp ../SporeModder-FX/reg_simulator_stub.txt "SporeModder FX/reg_simulator_stub.txt"
-          cp ../SporeModder-FX/reg_type.txt "SporeModder FX/reg_type.txt"
+          cp SporeModder-FX/reg_cnv.txt "SporeModder FX/reg_cnv.txt"
+          cp SporeModder-FX/reg_file.txt "SporeModder FX/reg_file.txt"
+          cp SporeModder-FX/reg_property.txt "SporeModder FX/reg_property.txt"
+          cp SporeModder-FX/reg_simulator.txt "SporeModder FX/reg_simulator.txt"
+          cp SporeModder-FX/reg_simulator_stub.txt "SporeModder FX/reg_simulator_stub.txt"
+          cp SporeModder-FX/reg_type.txt "SporeModder FX/reg_type.txt"
           cp SporeModder-FX-jar/sporemodderfx.jar "SporeModder FX/SporeModderFX.jar"
 
       - name: Generate release zip
