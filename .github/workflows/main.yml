@@ -43,6 +43,8 @@ jobs:
           path: SporeModder-FX
           fetch-depth: 0
 
+      - run: pwd ; ls
+
       - name: Checkout Updater
         uses: actions/checkout@v1
         with:
