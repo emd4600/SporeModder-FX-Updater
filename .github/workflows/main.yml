@@ -48,7 +48,7 @@ jobs:
         with:
           path: Updater
 
-      - run: pwd | ls
+      - run: pwd ; ls
 
       - name: Update reg_file.txt
         run: bash collect_reg_changes.sh reg_file.txt # >> Updater/src/sporemodder/updater/resources/reg_file.txt
