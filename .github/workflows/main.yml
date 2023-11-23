@@ -15,10 +15,7 @@ jobs:
 
       - name: Calculate release version
         id: version_number
-        run: |
-          version=$(git describe --tags --abbrev=0 | cut -c2- )
-          echo "Version: $version"
-          echo "version=$version" >> $GITHUB_OUTPUT
+        run: bash calculate_new_version.sh >> $GITHUB_OUTPUT
           
       - name: Set up JDK 11 for x64
         uses: actions/setup-java@v3
@@ -48,7 +45,7 @@ jobs:
           path: shade/sporemodderfx.jar
 
   build_updater:
-    name: Build updater
+    name: Build Updater
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Updater
@@ -71,6 +68,12 @@ jobs:
 
       - name: Update reg_type.txt
         run: bash collect_reg_changes.sh reg_type.txt >> src/sporemodder/updater/resources/reg_type_noforce.txt
+
+      - name: Download SporeModderFX.jar
+        uses: actions/download-artifact@v2.1.1
+        with:
+          name: # optional
+          path: # optional
         
       - name: Set up JDK 11 for x64
         uses: actions/setup-java@v3
