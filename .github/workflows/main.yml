@@ -82,6 +82,7 @@ jobs:
 
       - run: ls
       - run: ls target
+      - run: ls SporeModder-FX-jar
 
       - name: Update release files
         run: |
@@ -91,7 +92,7 @@ jobs:
           cp SporeModder-FX/reg_simulator.txt "SporeModder FX/reg_simulator.txt"
           cp SporeModder-FX/reg_simulator_stub.txt "SporeModder FX/reg_simulator_stub.txt"
           cp SporeModder-FX/reg_type.txt "SporeModder FX/reg_type.txt"
-          cp sporemodderfx.jar "SporeModder FX/SporeModderFX.jar"
+          cp SporeModder-FX-jar/sporemodderfx.jar "SporeModder FX/SporeModderFX.jar"
 
       - name: Generate release zip
         run: zip -r "SporeModder FX.zip" "SporeModder FX"
