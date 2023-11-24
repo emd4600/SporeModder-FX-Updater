@@ -121,6 +121,7 @@ jobs:
           fetch-depth: 0
 
       - name: Generate changelog
+        id: version_number
         run: |
           git log $(git describe --tags --abbrev=0)..HEAD --oneline --format=%s > changelog.txt
           version=$( bash calculate_new_version.sh )
@@ -139,6 +140,8 @@ jobs:
           name: SporeModder FX v${{ steps.version_number.outputs.version }}
           tag_name: v${{ steps.version_number.outputs.version }}
           body_path: changelog.txt
-          files: SporeModderFX.Updater.jar "SporeModder FX.zip"
+          files: |
+            SporeModderFX.Updater.jar 
+            SporeModder FX.zip
 
 # git log $(git describe --tags --abbrev=0)..HEAD --oneline --format=%s
