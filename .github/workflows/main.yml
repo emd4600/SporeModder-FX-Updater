@@ -122,10 +122,9 @@ jobs:
 
       - name: Generate changelog
         run: |
-          message=$( git log $(git describe --tags --abbrev=0)..HEAD --oneline --format=%s )
+          git log $(git describe --tags --abbrev=0)..HEAD --oneline --format=%s > changelog.txt
           version=$( bash calculate_new_version.sh )
           echo "version=$version" >> $GITHUB_OUTPUT
-          echo "message=$message" >> $GITHUB_OUTPUT
 
       - name: Download artifacts
         uses: actions/download-artifact@v2.1.1
@@ -139,7 +138,7 @@ jobs:
           repository: emd4600/SporeModder-FX
           name: SporeModder FX v${{ steps.version_number.outputs.version }}
           tag_name: v${{ steps.version_number.outputs.version }}
-          body: ${{ steps.commit_message.outputs.message }}
+          body_path: changelog.txt
           files: SporeModderFX.Updater.jar "SporeModder FX.zip"
 
 # git log $(git describe --tags --abbrev=0)..HEAD --oneline --format=%s
