@@ -100,8 +100,8 @@ jobs:
           git add src/sporemodder/updater/resources/Styles/Dark/syntax.css
           git add -f src/sporemodder/updater/resources/SporeModderFX.jar
           git commit -m "Bump updater"
-          git push
-
+          git push --set-upstream origin main
+          
       - name: Push changes to Updater repo
         uses: ad-m/github-push-action@master
         with:
