@@ -53,10 +53,6 @@ jobs:
           fetch-depth: 0
           path: SporeModder-FX
 
-      - run: pwd
-      - run: ls
-      - run: ls ..
-
       - name: Update reg_file.txt
         run: bash collect_reg_changes.sh reg_file.txt >> src/sporemodder/updater/resources/reg_file.txt
 
@@ -88,6 +84,10 @@ jobs:
 
       - name: Commit changes to Updater repo
         run: |
+          rm -rf .git
+          git init -b main
+          git remote add origin https://github.com/emd4600/SporeModder-FX-Updater.git
+          git fetch
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add --all "SporeModder FX"
