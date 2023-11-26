@@ -1,4 +1,4 @@
-name: Package and commit SporeModder FX Udpate
+name: Package and commit SporeModder FX Update
 on:
   workflow_dispatch:
 
@@ -98,7 +98,7 @@ jobs:
           git add src/sporemodder/updater/resources/Styles/syntax.css
           git add src/sporemodder/updater/resources/Styles/Dark/basic.css
           git add src/sporemodder/updater/resources/Styles/Dark/syntax.css
-          git add src/sporemodder/updater/resources/SporeModderFX.jar
+          git add -f src/sporemodder/updater/resources/SporeModderFX.jar
           git commit -m "Bump updater"
           git push
 
