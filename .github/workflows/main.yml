@@ -35,23 +35,26 @@ jobs:
           name: SporeModder-FX-jar
           path: shade/sporemodderfx.jar
 
-  build_updater:
-    name: Build Updater
+  commit_updater:
+    name: Commit Updater Changes
     needs: build_smfx
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Updater
+        uses: actions/checkout@v1
+        with:
+          repository: emd4600/SporeModder-FX-Updater
+          ref: main
+
       - name: Checkout SporeModder-FX
         uses: actions/checkout@v4
         with:
           repository: emd4600/SporeModder-FX
           fetch-depth: 0
 
-      - name: Checkout Updater
-        uses: actions/checkout@v1
-        with:
-          repository: emd4600/SporeModder-FX-Updater
-          ref: main
-          path: Updater
+      - run: pwd
+      - run: ls
+      - run: ls ..
 
       - name: Update reg_file.txt
         run: bash ../Updater/collect_reg_changes.sh reg_file.txt >> ../Updater/src/sporemodder/updater/resources/reg_file.txt
