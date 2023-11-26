@@ -80,10 +80,6 @@ jobs:
 
       - name: Commit changes to Updater repo
         run: |
-          rm -rf .git
-          git init -b main
-          git remote add origin https://github.com/emd4600/SporeModder-FX-Updater.git
-          git fetch
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add --all "SporeModder FX"
@@ -96,7 +92,7 @@ jobs:
           git add src/sporemodder/updater/resources/Styles/Dark/syntax.css
           git add -f src/sporemodder/updater/resources/SporeModderFX.jar
           git commit -m "Bump updater"
-          git push --set-upstream origin main
+          git push origin main
           
       - name: Push changes to Updater repo
         uses: ad-m/github-push-action@master
