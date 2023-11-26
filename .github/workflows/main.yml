@@ -48,6 +48,8 @@ jobs:
 
       - name: Build Updater
         run: git clone git@github.com:emd4600/SporeModder-FX-Updater .
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Checkout SporeModder-FX
         run: git clone https://github.com/emd4600/SporeModder-FX SporeModder-FX
