@@ -53,6 +53,10 @@ jobs:
           ref: main
           path: Updater
 
+      - run: pwd
+      - run: ls
+      - run: ls ..
+
       - name: Update reg_file.txt
         run: bash ../Updater/collect_reg_changes.sh reg_file.txt >> ../Updater/src/sporemodder/updater/resources/reg_file.txt
 
