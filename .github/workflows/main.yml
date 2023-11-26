@@ -88,7 +88,6 @@ jobs:
 
       - name: Commit changes to Updater repo
         run: |
-          cd ../Updater
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add --all "SporeModder FX"
