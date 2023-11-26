@@ -71,15 +71,10 @@ jobs:
       - name: Copy sporemodderfx.jar
         run: cp SporeModder-FX-jar/sporemodderfx.jar ../Updater/src/sporemodder/updater/resources/SporeModderFX.jar
 
-      - name: Set up JDK 11 for x64
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'temurin'
-          architecture: x64
-
-      - name: Build with Maven
-        run: cd ../Updater && mvn -B package --file pom.xml
+      - run: ls
+      - run: ls ../
+      - run: ls ../Updater
+      - run: ls "../Updater/SporeModder FX"
 
       - name: Update release files
         run: |
