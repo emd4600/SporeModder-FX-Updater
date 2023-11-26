@@ -47,11 +47,7 @@ jobs:
           ref: main
 
       - name: Checkout SporeModder-FX
-        uses: actions/checkout@v4
-        with:
-          repository: emd4600/SporeModder-FX
-          fetch-depth: 0
-          path: SporeModder-FX
+        run: git clone https://github.com/emd4600/SporeModder-FX SporeModder-FX
 
       - name: Update reg_file.txt
         run: bash collect_reg_changes.sh reg_file.txt >> src/sporemodder/updater/resources/reg_file.txt
