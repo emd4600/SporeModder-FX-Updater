@@ -40,18 +40,18 @@ jobs:
     needs: build_smfx
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout SporeModder-FX
-        uses: actions/checkout@v4
-        with:
-          repository: emd4600/SporeModder-FX
-          fetch-depth: 0
-
       - name: Checkout Updater
         uses: actions/checkout@v1
         with:
           repository: emd4600/SporeModder-FX-Updater
           ref: main
-          path: Updater
+
+      - name: Checkout SporeModder-FX
+        uses: actions/checkout@v4
+        with:
+          repository: emd4600/SporeModder-FX
+          fetch-depth: 0
+          path: SporeModder-FX
 
       - run: pwd
       - run: ls
