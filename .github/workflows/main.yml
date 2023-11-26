@@ -40,11 +40,14 @@ jobs:
     needs: build_smfx
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Updater
-        uses: actions/checkout@v1
-        with:
-          repository: emd4600/SporeModder-FX-Updater
-          ref: main
+      #- name: Checkout Updater
+       # uses: actions/checkout@v1
+        #with:
+         # repository: emd4600/SporeModder-FX-Updater
+          #ref: main
+
+      - name: Build Updater
+        run: git clone git@github.com:emd4600/SporeModder-FX-Updater .
 
       - name: Checkout SporeModder-FX
         run: git clone https://github.com/emd4600/SporeModder-FX SporeModder-FX
@@ -84,7 +87,7 @@ jobs:
           #git config --local user.name "github-actions[bot]"
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git remote set-url origin git@github.com:emd4600/SporeModder-FX-Updater
+          #git remote set-url origin git@github.com:emd4600/SporeModder-FX-Updater
           #git add --all "SporeModder FX"
           #git add src/sporemodder/updater/resources/reg_file.txt
           #git add src/sporemodder/updater/resources/reg_property.txt
