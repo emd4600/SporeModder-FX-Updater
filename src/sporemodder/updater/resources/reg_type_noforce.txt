@@ -272,3 +272,5 @@ activeLog	0x2c23df7
 cPlanetRecord	0x5220cb8
 
 mrk	0x2b7df427
+
+audioProp	0x2b9f662
