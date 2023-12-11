@@ -85,19 +85,19 @@ jobs:
 
       - name: Commit changes to Updater repo
         run: |
-          #git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          #git config --local user.name "github-actions[bot]"
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          #git config user.name github-actions
+          #git config user.email github-actions@github.com
           #git remote set-url origin git@github.com:emd4600/SporeModder-FX-Updater
-          #git add --all "SporeModder FX"
-          #git add src/sporemodder/updater/resources/reg_file.txt
-          #git add src/sporemodder/updater/resources/reg_property.txt
-          #git add src/sporemodder/updater/resources/reg_type_noforce.txt
-          #git add src/sporemodder/updater/resources/Styles/basic.css
-          #git add src/sporemodder/updater/resources/Styles/syntax.css
-          #git add src/sporemodder/updater/resources/Styles/Dark/basic.css
-          #git add src/sporemodder/updater/resources/Styles/Dark/syntax.css
+          git add --all "SporeModder FX"
+          git add src/sporemodder/updater/resources/reg_file.txt
+          git add src/sporemodder/updater/resources/reg_property.txt
+          git add src/sporemodder/updater/resources/reg_type_noforce.txt
+          git add src/sporemodder/updater/resources/Styles/basic.css
+          git add src/sporemodder/updater/resources/Styles/syntax.css
+          git add src/sporemodder/updater/resources/Styles/Dark/basic.css
+          git add src/sporemodder/updater/resources/Styles/Dark/syntax.css
           git add -f src/sporemodder/updater/resources/SporeModderFX.jar
           git commit -m "Bump updater"
           git push origin main
