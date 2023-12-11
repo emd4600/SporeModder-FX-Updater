@@ -35,8 +35,8 @@ jobs:
           name: SporeModder-FX-jar
           path: shade/sporemodderfx.jar
 
-  build_updater:
-    name: Build Updater
+  commit_updater:
+    name: Commit Updater Changes
     needs: build_smfx
     runs-on: ubuntu-latest
     steps:
