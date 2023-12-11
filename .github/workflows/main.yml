@@ -40,16 +40,16 @@ jobs:
     needs: build_smfx
     runs-on: ubuntu-latest
     steps:
-      #- name: Checkout Updater
-       # uses: actions/checkout@v1
-        #with:
-         # repository: emd4600/SporeModder-FX-Updater
-          #ref: main
+      - name: Checkout Updater
+        uses: actions/checkout@v4
+        with:
+          repository: emd4600/SporeModder-FX-Updater
+          ref: main
 
-      - name: Build Updater
-        run: git clone git@github.com:emd4600/SporeModder-FX-Updater .
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      #- name: Build Updater
+      #  run: git clone git@github.com:emd4600/SporeModder-FX-Updater .
+      #  env:
+      #    NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Checkout SporeModder-FX
         run: git clone https://github.com/emd4600/SporeModder-FX SporeModder-FX
