@@ -55,13 +55,19 @@ jobs:
         run: git clone https://github.com/emd4600/SporeModder-FX SporeModder-FX
 
       - name: Update reg_file.txt
-        run: bash collect_reg_changes.sh reg_file.txt >> src/sporemodder/updater/resources/reg_file.txt
+        run: |
+          echo $"\n" >> src/sporemodder/updater/resources/reg_file.txt
+          bash collect_reg_changes.sh reg_file.txt >> src/sporemodder/updater/resources/reg_file.txt
 
       - name: Update reg_property.txt
-        run: bash collect_reg_changes.sh reg_property.txt >> src/sporemodder/updater/resources/reg_property.txt
+        run:  |
+          echo $"\n" >> src/sporemodder/updater/resources/reg_property.txt
+          bash collect_reg_changes.sh reg_property.txt >> src/sporemodder/updater/resources/reg_property.txt
 
       - name: Update reg_type.txt
-        run: bash collect_reg_changes.sh reg_type.txt >> src/sporemodder/updater/resources/reg_type_noforce.txt
+        run:  |
+          echo $"\n" >> src/sporemodder/updater/resources/reg_type_noforce.txt
+          bash collect_reg_changes.sh reg_type.txt >> src/sporemodder/updater/resources/reg_type_noforce.txt
 
       - name: Download SporeModderFX.jar
         uses: actions/download-artifact@v3
