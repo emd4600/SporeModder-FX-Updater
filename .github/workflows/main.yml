@@ -97,6 +97,7 @@ jobs:
           #git config user.email github-actions@github.com
           #git remote set-url origin git@github.com:emd4600/SporeModder-FX-Updater
           git add --all "SporeModder FX"
+          git add -f "SporeModder FX/SporeModderFX.jar"
           git add src/sporemodder/updater/resources/reg_file.txt
           git add src/sporemodder/updater/resources/reg_property.txt
           git add src/sporemodder/updater/resources/reg_type_noforce.txt
