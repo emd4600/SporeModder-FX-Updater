@@ -40,7 +40,8 @@ public class UpdaterApp extends Application {
 		task.addFile("smfx.exe");
 		task.addFile("ModCreatorKit.sporemod");
 		task.addFile("advect.py");
-		
+		task.addFile("smfx.sh");
+
 		task.addOptionalFile("EffectsEditor/main.pfx", buildPath("Effect Editor", "main.pfx"));
 		task.addOptionalFile("EffectsEditor/main.effdir", buildPath("Effect Editor", "main.effdir"));
 		
@@ -53,6 +54,12 @@ public class UpdaterApp extends Application {
 		task.addFile("Styles/spui-import.png", buildPath("Styles", "Default", "spui-import.png"));
 		task.addFile("Styles/spui-export.png", buildPath("Styles", "Default", "spui-export.png"));
 		task.addFile("Styles/anim-icon.png", buildPath("Styles", "Default", "anim-icon.png"));
+		task.addFile("Styles/git-commit.png", buildPath("Styles", "Default", "git-commit.png"));
+		task.addFile("Styles/git-login.png", buildPath("Styles", "Default", "git-login.png"));
+		task.addFile("Styles/git-publish.png", buildPath("Styles", "Default", "git-publish.png"));
+		task.addFile("Styles/git-sync.png", buildPath("Styles", "Default", "git-sync.png"));
+		task.addFile("Styles/git-new-repo.png", buildPath("Styles", "Default", "git-new-repo.png"));
+		task.addFile("Styles/git-connect-existing-repo.png", buildPath("Styles", "Default", "git-connect-existing-repo.png"));
 		task.addFile("UIEditor/SporeUIDesignerProjectCustom.xml", buildPath("UI Editor", "SporeUIDesignerProjectCustom.xml"));
 		
 		String[] names = new String[] {
@@ -63,7 +70,7 @@ public class UpdaterApp extends Application {
 			"new-file.png", "new-folder.png", "number-converter-type.png", "pack-and-run.png", "pack.png", "program-icon-old.png", "program-icon.png", "redo.png", 
 			"refresh.png", "remove-item.png", "rename-item.png", "ribbon-expand.png", "ribbon-minimize.png", "ribbonstyle.css", "run-without-pack.png", "save.png", 
 			"search-fast.png", "search.png", "spui-duplicate.png", "spui-export.png", "spui-import.png", "spui-preview.png", "syntax.css", "undo.png", "unpack.png",
-			"anim-icon.png"
+			"anim-icon.png", "git-sync.png", "git-commit.png", "git-login.png", "git-publish.png", "git-new-repo.png", "git-connect-existing-repo.png"
 		};
 		for (String file : names) {
 			task.addFile("Styles/Dark/" + file, buildPath("Styles", "Dark", file));
