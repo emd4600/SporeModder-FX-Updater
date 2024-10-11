@@ -291,3 +291,10 @@ audioProp	0x2b9f662
 16bitImage	0x3e421f0
 
 
+
+
+ttf	0x276CA4B9
+LootSuffix.bin	0x447DC2E5
+bak.png	0xDEAF6ADE
+bak2.png	0xDC74130E
+adv 0x366a930d
